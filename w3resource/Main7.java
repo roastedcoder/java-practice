@@ -8,7 +8,9 @@ public class Main7 {
 
     bank.addAccount(account);
     bank.deposit(account, 101);
+    System.out.println(account.getBalance());
 
+    bank.withdraw(account, 1);
     System.out.println(account.getBalance());
   }
 }
