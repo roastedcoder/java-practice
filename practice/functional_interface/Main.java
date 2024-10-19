@@ -4,7 +4,8 @@ public class Main {
   public static void main(String[] args) {
     // we can implement FunctionalInterface using 
     // implements or 
-    // anonymous class
+    // anonymous class or
+    // lambda expression (java 8)
 
 
     // Using implements.
@@ -17,7 +18,7 @@ public class Main {
     Bird crow = new Bird() {
       @Override
       public void canFly() {
-        System.out.println("Crow can't fly high!");
+        System.out.println("Crow implementing bird");
       }
 
       @Override
@@ -28,6 +29,14 @@ public class Main {
 
     crow.canFly();
     System.out.println(crow.getHeight());
-    System.out.println(Bird.canEat());
+
+    // Lambda expresssion
+    Bird kite = () -> { // since there will always have only one abstract method 
+      // so no need for method name here, also () will contain arguments.
+      System.out.println("Kite implementing bird");
+    };
+
+    kite.canFly();
+    System.out.println(crow.getHeight());
   }
 }
