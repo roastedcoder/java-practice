@@ -1,6 +1,6 @@
 package practice.concurrency;
 
-public class Main {
+public class ConcurrencyMain {
   public static void main(String[] args) {
     /*
       Thread and Process:
