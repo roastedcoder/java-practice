@@ -1,6 +1,6 @@
 package practice.concurrency;
 
-public class Threads {
+public class Main {
   public static void main(String[] args) {
     /*
       Thread and Process:
@@ -78,5 +78,53 @@ public class Threads {
 
     */
     System.out.println("Thread name: " + Thread.currentThread().getName()); // main
+
+    /*
+      - Ways to create:
+        - implement "Runnable" interface.
+        - extend "Thread" class
+
+        * If a class has already extended a class then it can not extend Thread 
+          but can implement multiple interfaces so can also implement Runnable.
+      
+    */
+
+
+    System.out.println("Runnable: Going inside main method: " + Thread.currentThread().getName());
+
+    // Using Runnable
+    // Create a Runnable Object: ImplementRunnable class
+
+    // Start the thread
+    // Create an instance of ImplementRunnable class
+    ImplementRunnable runnableObj = new ImplementRunnable();
+
+    // Pass the runnable object to the thread constructor.
+    Thread thread = new Thread(runnableObj);
+    thread.start();
+
+    System.out.println("Finish main method: " + Thread.currentThread().getName());
+    System.out.println();
+
+    /*
+      STDOUT:
+        Going inside main method: main
+        Finish main method: main
+        Code executed by thread: Thread-0
+    */
+
+    System.out.println("Thread: Going inside main method: " + Thread.currentThread().getName());
+
+    // Using Thread class
+    // Create a Thread subclass: ExtendThread class.
+    // Override run() method.
+
+    // Create an instance of Thread class
+
+    ExtendThread threadObj = new ExtendThread();
+    threadObj.start();
+
+    System.out.println("Finish main method: " + Thread.currentThread().getName());
+
   }
 }
