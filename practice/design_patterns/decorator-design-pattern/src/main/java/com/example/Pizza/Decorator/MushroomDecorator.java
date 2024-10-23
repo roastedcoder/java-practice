@@ -2,7 +2,7 @@ package com.example.Pizza.Decorator;
 
 import com.example.Pizza.BasePizza;
 
-public class MushroomDecorator extends ToppingDecorator {
+public class MushroomDecorator implements ToppingDecorator {
   BasePizza basePizza;
 
     public MushroomDecorator(BasePizza basePizza) {

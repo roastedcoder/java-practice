@@ -1,6 +1,6 @@
 package com.example.Pizza;
 
-public class VegDelight extends BasePizza {
+public class VegDelight implements BasePizza {
 
   @Override
   public int cost() {
