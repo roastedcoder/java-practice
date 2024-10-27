@@ -1,4 +1,4 @@
-package practice.thread_lifecycle.producer_consumer_single;
+package practice.concurrency.thread_lifecycle.producer_consumer_single;
 
 public class Main {
   public static void main(String[] args) {

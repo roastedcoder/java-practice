@@ -1,4 +1,4 @@
-package practice.thread_lifecycle.producer_consumer_multiple;
+package practice.concurrency.thread_lifecycle.producer_consumer_multiple;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package practice.thread_lifecycle;
+package practice.concurrency.thread_lifecycle;
 
 public class MonitorLock {
 
