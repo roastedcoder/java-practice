@@ -20,8 +20,10 @@ public class JavaList {
 
       ArrayList<Integer> arraylist = new ArrayList<>();
       arraylist.add(1);
-      arraylist.add(2);
       arraylist.add(3);
+      arraylist.add(2);
+
+      Collections.sort(arraylist);
 
       for (Integer element : list) {
         System.out.println("List Element: " + element);
@@ -37,6 +39,13 @@ public class JavaList {
 
       for(int i = 0; i < arraylist.size(); i++) {
         System.out.println("ArrayList Element at index " + i + ": " + arraylist.get(i));
+      }
+
+      System.out.println("Converting arraylist to array: ");
+      Integer[] array = arraylist.toArray(Integer[]::new);
+
+      for(int i = 0; i < array.length; i++) {
+        System.out.println("Array element at index " + i + ": " + array[i]);
       }
 
       LinkedList<Integer> linkedlist = new LinkedList<>();

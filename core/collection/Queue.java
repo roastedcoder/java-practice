@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.PriorityQueue;
 
 public class Queue {
@@ -33,5 +35,17 @@ public class Queue {
         System.out.println(val);
       }
 
+      System.out.println("Deque interface:");
+      Deque<Integer> queue = new ArrayDeque<>();
+      queue.addLast(1);
+      queue.addLast(2);
+      queue.addLast(3);
+      queue.forEach((Integer val) -> System.out.println("Deque element: " + val));
+
+      queue.addFirst(0);
+      queue.forEach((Integer val) -> System.out.println("Deque element: " + val));
+
+      queue.removeFirst();
+      queue.forEach((Integer val) -> System.out.println("Deque element: " + val));
   }
 }
