@@ -3,6 +3,7 @@ import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Main {
   public static void main(String[] args) {
@@ -78,6 +79,7 @@ public class Main {
 
     for (Map.Entry<Integer, Integer> entry : linkedhashmap.entrySet()) {
         System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        // linkedhashmap.put(7, 8); // not allowed (ConcurrentModificationException)
     }
 
     linkedhashmap.forEach((Integer key, Integer val) -> System.out.println("Key: " + key + " and value: " + val));
@@ -112,5 +114,15 @@ public class Main {
     System.out.println("FloorEntry 5 key: " + treemap.floorEntry(5).getKey() + " value: " + treemap.floorEntry(5).getValue());
     System.out.println("FloorKey: " + treemap.floorKey(5));
     
+    System.out.println("ConcurrentHashMap:");
+    ConcurrentHashMap<Integer, Integer> concurrentHashMap = new ConcurrentHashMap<>();
+    concurrentHashMap.put(1, 2);
+    concurrentHashMap.put(3, 4);
+    concurrentHashMap.put(5, 6);
+
+    for (Map.Entry entry : concurrentHashMap.entrySet()) {
+        System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        concurrentHashMap.put(7, 8); // allowed
+    }
   }
 }
