@@ -30,3 +30,25 @@ public class Main {
         parkingLot.parkVehicle(myNewCar);
     }
 }
+
+/*
+STDOUT:
+
+Parking Lot
+
+Bike: 1, Car: 1
+Level: 1
+BIKE Spot available: true
+CAR Spot available: true
+______________________________________
+
+Vehicle parked: CAR 0711
+Vehicle parked: BIKE 1234
+Couldn't park vehicle: TRUCK 0000
+Couldn't park vehicle: CAR 0712
+Vehicle un-parked: BIKE 1234
+Couldn't park vehicle: CAR 0712
+Vehicle un-parked: CAR 0711
+Vehicle parked: CAR 0712
+
+*/
